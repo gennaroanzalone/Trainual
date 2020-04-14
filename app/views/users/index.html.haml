@@ -1,21 +1,22 @@
 %h1 Users
 
-%table
+
+%table.table.table-striped
   %thead
     %tr
-      %th Last Updated
-      %th Name
-      %th Email
-      %th Title
-      %th Phone
-      %th Status
+      %th{:scope => "col"} Last Updated
+      %th{:scope => "col"} Name
+      %th{:scope => "col"} Email
+      %th{:scope => "col"} Title
+      %th{:scope => "col"} Phone
+      %th{:scope => "col"} Status
       %th
       %th
       %th
 
   %tbody
     - @users.each do |user|
-      %tr
+      %tr{:scope => "row"}
         %td= user.updated_at
         %td= user.name
         %td= user.email

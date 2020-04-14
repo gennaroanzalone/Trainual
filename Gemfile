@@ -23,6 +23,7 @@ gem 'haml'
 gem 'haml-rails', '~> 2.0'
 gem 'bootstrap', '~> 4.4.1'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'jquery-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

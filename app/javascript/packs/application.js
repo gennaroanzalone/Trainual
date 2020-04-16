@@ -8,6 +8,15 @@ require("turbolinks").start();
 require("@rails/activestorage").start();
 require("channels");
 require("datatables.net-bs4");
+// require("bootstrap")
+// require("popper")
+
+import 'bootstrap'
+
+document.addEventListener("turbolinks:load", () => {
+  $('[data-toggle="tooltip]"').tooltip()
+  $('[data-toggle="popover]"').popover();
+})
 
 import $ from "jquery";
 global.$ = jQuery;

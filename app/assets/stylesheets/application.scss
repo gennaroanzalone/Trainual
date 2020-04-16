@@ -25,5 +25,20 @@
 }
 
 #add_button {
+  width: inherit;
   color: white;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.sorting_asc {
+  width: auto !important;
+}
+
+.dataTables_filter {
+  float: right;
 }

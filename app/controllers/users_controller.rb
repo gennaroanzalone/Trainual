@@ -25,7 +25,6 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = User.new
-    @user = User.find(params[:id])
     respond_to do |format|
       format.html
       format.js

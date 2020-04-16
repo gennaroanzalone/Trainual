@@ -6,6 +6,10 @@ class UsersController < ApplicationController
   def index
     @user = User.new
     @users = User.all
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /users/1
@@ -45,7 +49,6 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         format.html {redirect_to users_path, notice: 'User was successfully updated.' }
-        format.js
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }

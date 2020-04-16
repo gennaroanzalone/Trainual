@@ -8,18 +8,18 @@
 
   .field
     = f.label :name
-    = f.text_field :name, :size => "50"
+    = f.text_field :name, :size => "40"
   .field
     = f.label :email
-    = f.text_field :email, :size => "50"
+    = f.text_field :email, :size => "40"
   .field
     = f.label :title
-    = f.text_field :title, :size => "50"
+    = f.text_field :title, :size => "40"
   .field
     = f.label :phone
-    = f.text_field :phone, :size => "50"
+    = f.text_field :phone, :size => "40"
   .field
     = f.label :active
     = f.check_box :status
   .actions
-    = f.submit 'Save', {:class => "btn btn-primary"}
+    = f.submit 'Save', {:class => "btn", :remote => true}

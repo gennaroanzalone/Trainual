@@ -1,6 +1,7 @@
-.modal-header
-  %h4#myModalLabel.modal-title  Edit user
-.modal-body
-  = render 'form'
-.modal-footer
-  %button.btn.btn-dark{"data-dismiss" => "modal", :type => "button"} Close
+.container-fluid
+  .modal-header
+    %h4#myModalLabel.modal-title  Edit User
+  .modal-body
+    = render 'form'
+  .modal-footer
+    %button.btn.btn-dark{"data-dismiss" => "modal", :type => "button"} Close

@@ -1,6 +1,6 @@
 %h1 Users Index
 
-= link_to 'Add user', new_user_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#new-modal-window', class: 'btn btn-success'} 
+= link_to 'Add User', new_user_path,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#new-modal-window', class: 'btn btn-primary', id: 'add_button'} 
 
 #new-modal-window.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog"}
   .modal-dialog{:role => "document"}

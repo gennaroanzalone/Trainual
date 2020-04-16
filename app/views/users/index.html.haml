@@ -1,5 +1,9 @@
 %h1 Trainual Engineer Assessment
 
+- flash.each do |type, msg|
+  %div.alert.alert-success
+    = msg
+
 = link_to 'Add User', new_user_path,  {'data-toggle' =>  "modal", 'data-target' => '#new-modal-window', class: 'btn', id: 'add_button', :remote => true}
 
 #new-modal-window.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog"}

@@ -20,13 +20,24 @@
         %td= user.title
         %td= user.phone
         %td{:class => "#{user.status}"}= user.status ? "Active" : "Inactive"
-        %td= link_to 'Show', user,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#show-modal-window', 'data-remote' => '#show-modal-window'} 
-        %td= link_to 'Edit', edit_user_path(user), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#edit-modal-window', 'data-remote' => '#edit-modal-window'} 
-        %td= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
-
+        %td= link_to 'Show', user,  {:remote => true, 
+                                      'data-toggle' =>  "modal", 
+                                      'data-target' => '#show-modal-window', 
+                                      'data-remote' => '#show-modal-window', 
+                                      :class => "btn"} 
+        %td= link_to 'Edit', edit_user_path(user), {:remote => true, 
+                                                      'data-toggle' =>  "modal", 
+                                                      'data-target' => '#edit-modal-window', 
+                                                      'data-remote' => '#edit-modal-window', 
+                                                      :class => "btn"} 
+        %td= link_to 'Delete', user, :class => "btn delete", 
+                                      method: :delete, 
+                                      data: { confirm: 'Are you sure?' }
 %br
 
 :javascript
     $(document).ready(function() {
-      $('#data-table').DataTable();
+      $('#data-table').DataTable({
+        "lengthMenu": [25]
+      });
     });

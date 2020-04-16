@@ -20,5 +20,9 @@
       .modal-body
         = render "edit"
 
+#updated-users.hide{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog"}
+  .updated-body
 
-= render :partial => "table"
+#create-users.hide{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog"}
+  .create-body
+    = render 'table'

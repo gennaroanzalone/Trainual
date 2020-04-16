@@ -14,5 +14,11 @@
       .modal-body
         = render "show"
 
+#edit-modal-window.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-body
+        = render "edit"
+
 
 = render :partial => "table"

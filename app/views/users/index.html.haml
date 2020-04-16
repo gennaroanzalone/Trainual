@@ -6,20 +6,26 @@
 
 = link_to 'Add User', new_user_path,  {'data-toggle' =>  "modal", 'data-target' => '#new-modal-window', class: 'btn', id: 'add_button', :remote => true}
 
+// Modal placeholder for creating a new user. Unhidden on button click and popualted by partial view
 #new-modal-window.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog"}
   .modal-dialog{:role => "document"}
     .modal-content
       .modal-body
         = render "new"
      
+// Modal placeholder for showing user details. Unhidden on button click and popualted by partial view
 #show-modal-window.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog"}
   .modal-dialog{:role => "document"}
     .modal-content
       .modal-body
         = render "show"
+
+// Modal placeholder for editing a user. Unhidden on button click and popualted by partial view
 #edit-modal-window.modal.hide.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog"}
   .modal-dialog{:role => "document"}
     .modal-content
       .modal-body
         = render "edit"
+
+// Partial render for dataTable
 = render :partial => "table"

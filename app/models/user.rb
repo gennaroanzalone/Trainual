@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
   private
 
+  # Convert all emails to lowercase before validation
   def downcase_email
     self.email = email.downcase if email.present?
   end

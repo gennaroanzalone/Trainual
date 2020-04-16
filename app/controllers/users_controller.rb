@@ -22,7 +22,6 @@ class UsersController < ApplicationController
   def new
     @user = User.new
     @user = User.find(params[:id])
-    render :show_user_modal
     respond_to do |format|
       format.html
       format.js
@@ -60,7 +59,6 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        render :show_user_modal
         format.html { redirect_to users_path, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @user }
       else

@@ -4,21 +4,38 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
+    @user = User.new
     @users = User.all
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find(params[:id])
+      respond_to do |format|
+        format.html
+        format.js
+    end
   end
 
   # GET /users/new
   def new
     @user = User.new
+    @user = User.find(params[:id])
+    render :show_user_modal
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /users/1/edit
   def edit
+    @user = User.find(params[:id])
+      respond_to do |format|
+        format.html
+        format.js
+    end
   end
 
   # POST /users

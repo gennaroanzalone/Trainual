@@ -21,7 +21,7 @@
         %td= user.phone
         %td{:class => "#{user.status}"}= user.status ? "Active" : "Inactive"
         %td= link_to 'Show', user,  {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#show-modal-window', 'data-remote' => '#show-modal-window'} 
-        %td= link_to 'Edit', edit_user_path(user)
+        %td= link_to 'Edit', edit_user_path(user), {:remote => true, 'data-toggle' =>  "modal", 'data-target' => '#edit-modal-window', 'data-remote' => '#edit-modal-window'} 
         %td= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
 
 %br

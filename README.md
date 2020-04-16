@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Trainual Engineer Assessment
 
-Things you may want to cover:
+### A Simple CRUD User List
 
-* Ruby version
+Technologies Used
+  * [Rails 6](https://rubyonrails.org/)
+  * [Ruby 2.6](https://www.ruby-lang.org/en/)
+  * [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
+  * [HAML](http://haml.info/)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+##### Setup Instructions
+  1. clone repo into directory of your choosing 
+  2. run `bundle install` command
+  3. run `yarn install` command 
+  4. run `rails db:setup` command
+  5. run `rails serve` command
+  6. navigate to `localhost:3000`
+  7. check out the app!

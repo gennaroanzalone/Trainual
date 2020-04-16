@@ -27,18 +27,40 @@
 #add_button {
   width: inherit;
   color: white;
+  background-color: #482D8C;
+}
+
+.btn {
+  color: white;
+  background-color: #482D8C;
+}
+
+.btn a:hover {
+  text-decoration: none;
 }
 
 h1 {
   text-align: center;
   padding-bottom: 30px;
   padding-top: 30px;
+  font-family: Muli,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+  font-weight: 800;
 }
 
-.sorting_asc {
-  width: auto !important;
-}
+// .sorting_asc {
+//   width: auto !important;
+// }
 
 .dataTables_filter {
   float: right;
+}
+
+.dataTables_filter, .dataTables_length {
+  padding-top: 15px;
+}
+
+.div, .btn, .table, .container-fluid, .row {
+  font-family: Muli,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased !important;
 }
